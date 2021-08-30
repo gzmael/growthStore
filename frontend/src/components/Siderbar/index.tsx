@@ -1,9 +1,10 @@
 import React, { useCallback, useContext } from 'react'
 
-import { FilterContext } from '@hooks/filter'
-import { Specification } from '@models/Specifications'
 import { Layout, List, Typography, Checkbox, Row, Form } from 'antd'
 import { useForm } from 'antd/lib/form/util'
+
+import { FilterContext } from '@hooks/filter'
+import { Specification } from '@models/Specifications'
 
 const { Sider } = Layout
 const { Title, Text } = Typography
