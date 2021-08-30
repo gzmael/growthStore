@@ -50,7 +50,7 @@ const HeaderProducts = ({ query, type }: HeaderProductsProps) => {
       <BreadcrumbProducts type={type} query={query} />
       <Row gutter={16}>
         <Col>
-          <Text>Order by: {orderDefault}</Text>
+          <Text>Order by: </Text>
         </Col>
         <Col>
           <Select

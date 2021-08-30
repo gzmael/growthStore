@@ -54,7 +54,7 @@ const filterFavorites = ({
     })
   }
 
-  if (specifications) {
+  if (specifications.length > 0) {
     filtered = filtered.filter(({ specifications: specFav }) =>
       specFav.some(s => specifications.includes(s.description))
     )
