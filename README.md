@@ -96,7 +96,8 @@ _Observações_:
 - A api de `candys` rodará no endereço: `http://localhost:3335`.
 - As informações dos Produtos são gerados aleatóriamente.
 - Para excluir os containers no Docker, utilize o comando abaixo em cada um dos diretórios das apis
-  ```sh
+
+```sh
 docker-compose down -v --remove-orphans
 ```
 
