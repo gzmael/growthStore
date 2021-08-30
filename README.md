@@ -55,17 +55,12 @@ yarn typeorm:seeds
 #### 3. Executando os Testes de Integração e Unitários
 Agora execute o comandos abaixo para executar todos os testes.
 ```sh
-npm run test
+npm run test --detectOpenHandles
 ```
 ou com o Yarn
 ```sh
-yarn test
+yarn test --detectOpenHandles
 ```
-_Observações_: 
-- A api de `users` rodará no endereço: `http://localhost:3333`.
-- A api de `pets` rodará no endereço: `http://localhost:3334`.
-- A api de `candys` rodará no endereço: `http://localhost:3335`.
-
 ### Rodando o Front-end
 
 Acabei optando por usar o Framework [Next.js](https://nextjs.org/) para criar o frontend. Algumas vantagens desse framework para lojas virtuais podem ser lidas nesse [artigo](https://www.alura.com.br/artigos/next-js-vantagens).
@@ -95,4 +90,27 @@ ou com o Yarn
 yarn start
 ```
 
+_Observações_: 
+- A api de `users` rodará no endereço: `http://localhost:3333`.
+- A api de `pets` rodará no endereço: `http://localhost:3334`.
+- A api de `candys` rodará no endereço: `http://localhost:3335`.
+- As informações dos Produtos são gerados aleatóriamente.
+- Para excluir os containers no Docker, utilize o comando abaixo em cada um dos diretórios das apis
+  ```sh
+docker-compose down -v --remove-orphans
+```
 
+_Dificuldades que passei_:
+- Não tinha entendido como seria a persistência das buscas, filtros e atributos, só depois de gastar alguns dias eu percebi que poderia ser algo simples, como fiz.
+- Tive dificuldade em usar pela primeira vez o Ant Design, como usava mais o TailwindCSS, achei meio complicado no começo, mas depois ajuda muito na criação da interface.
+- O a ordenação dos produtos dos favoritos ainda está com problemas. O algoritmo pode ser melhorado.
+
+_Features que eu poderiam implementar_:
+- E-mail de ativação de conta.
+- E-mail template com handlebars.
+- Cache dos dados com Redis.
+- Validação dos requests com o celebrate.
+- Interface responsiva (ainda não aprendi com o Ant Design).
+- Dados dos Produtos com Server Side.
+- Cache no frontend com SWR.
+- Interface mais dinâmicas com animações.
