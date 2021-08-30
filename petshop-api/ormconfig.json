@@ -1,0 +1,52 @@
+[{
+  "name": "default",
+  "type": "postgres",
+  "port": 5454,
+  "host": "localhost",
+  "username": "pets_user",
+  "password": "pets",
+  "database": "pets_db",
+  "synchronize": false,
+  "logging": false,
+  "cache": false,
+  "entities": [
+    "./src/modules/**/infra/typeorm/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/shared/infra/typeorm/migrations/*.ts"
+  ],
+  "subscribers": [
+    "./src/shared/infra/typeorm/subscribers/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "./src/modules/**/infra/typeorm/entities",
+    "migrationsDir": "./src/shared/infra/typeorm/migrations",
+    "subscribersDir": "./src/shared/infra/typeorm/subscribers"
+  }
+},
+{
+  "name": "seed",
+  "type": "postgres",
+  "port": 5454,
+  "host": "localhost",
+  "username": "pets_user",
+  "password": "pets",
+  "database": "pets_db",
+  "synchronize": false,
+  "logging": false,
+  "cache": false,
+  "entities": [
+    "./src/modules/**/infra/typeorm/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/shared/infra/typeorm/seeds/*.ts"
+  ],
+  "subscribers": [
+    "./src/shared/infra/typeorm/subscribers/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "./src/modules/**/infra/typeorm/entities",
+    "migrationsDir": "./src/shared/infra/typeorm/seeds",
+    "subscribersDir": "./src/shared/infra/typeorm/subscribers"
+  }
+}]
