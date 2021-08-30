@@ -1,10 +1,9 @@
 import React, { useCallback, useContext } from 'react'
 
-import { Layout, List, Typography, Checkbox, Row, Form } from 'antd'
-import { useForm } from 'antd/lib/form/util'
-
 import { FilterContext } from '@hooks/filter'
 import { Specification } from '@models/Specifications'
+import { Layout, List, Typography, Checkbox, Row, Form } from 'antd'
+import { useForm } from 'antd/lib/form/util'
 
 const { Sider } = Layout
 const { Title, Text } = Typography
@@ -77,7 +76,7 @@ const SiderBar = ({ list, type, total }: ISiderBarProps) => {
                 <Row key={specification.public_id}>
                   <Checkbox
                     name={specification.public_id}
-                    onChange={() => handleChange(specification.description)}
+                    onChange={() => handleChange(specification.public_id)}
                     defaultChecked={
                       filter?.specifications &&
                       filter.specifications.includes(specification.public_id)
