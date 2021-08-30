@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  database_pets:
+    image: bitnami/postgresql:latest
+    container_name: db_pets
+    build: 
+      context: .
+      dockerfile: pg-Dockerfile
+      network: host
+    environment: 
+      - POSTGRES_DATABASE=pets_db
+      - POSTGRESQL_USERNAME=pets_user
+      - POSTGRES_PASSWORD=pets
+      - POSTGRESQL_POSTGRES_PASSWORD=admin_pass
+      - POSTGRESQL_POSTGRES_USERNAME=postgres
+      - POSTGRESQL_PORT_NUMBER=5454
+    ports:
+      - "5454:5454"
+    volumes:
+      - postgresql_data:/bitnami/postgresql
+
+  app:
+    build: .
+    container_name: app_pets
+    volumes:
+      - .:/usr/app
+    network_mode: host
+
+volumes:
+  postgresql_data:
+    driver: local

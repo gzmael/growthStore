@@ -1,0 +1,42 @@
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #11805c;
+  border: none
+}
+.containerMenu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .containerMenu {
+    max-width: 992px;
+  }
+}
+.left {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: 10px;
+  width: 160px;
+  height: 44px;
+  position: relative;
+}
+.menu_lista {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.signUp {
+  background: #fff;
+  border-radius: 4px;
+}

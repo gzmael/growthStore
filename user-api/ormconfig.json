@@ -1,0 +1,27 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "user_store",
+  "password": "store",
+  "database": "user_db",
+  "synchronize": false,
+  "logging": false,
+  "cache": false,
+  "schema": "public",
+  "entities": [
+    "./src/modules/**/infra/typeorm/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/shared/infra/typeorm/migrations/*.ts"
+  ],
+  "subscribers": [
+    "./src/shared/infra/typeorm/subscribers/*.ts"
+  ],
+  "cli": {
+    "entitiesDir": "./src/modules/**/infra/typeorm/entities",
+    "migrationsDir": "./src/shared/infra/typeorm/migrations",
+    "subscribersDir": "./src/shared/infra/typeorm/subscribers"
+  }
+}
